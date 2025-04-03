@@ -41,6 +41,9 @@ let ctx = useContext(Store);
             <Link to={"/signup"}>Signup</Link>
           </button>
         )}
+        <button  className="bg-green-400 text-white p-2 rounded-lg">
+          LogOut
+        </button>
       </div>
     </div>
   );
