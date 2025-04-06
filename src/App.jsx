@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="mt-[88px] z-50 ">
+        <div className="mt-[88px]   z-50 ">
           <Navbar />
         </div>
         <Routes>

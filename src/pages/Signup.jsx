@@ -44,7 +44,7 @@ const Signup = () => {
     <div>
       <form
         action=""
-        className="border bg-blue-950 border-white max-w-[400px] m-auto mt-[100px] p-6 rounded gap-2 flex flex-col"
+        className="border bg-blue-950 border-white max-w-[400px] m-auto mt-[100px] p-6 rounded gap-2 flex flex-col text-white"
       >
         <label htmlFor="">Name</label>
         <input

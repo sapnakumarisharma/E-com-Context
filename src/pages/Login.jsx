@@ -43,7 +43,7 @@ const Login = () => {
     <div>
       <form
         action=""
-        className="border bg-blue-950 border-white max-w-[400px] m-auto mt-[100px] p-6 rounded gap-2 flex flex-col"
+        className="border text-white bg-blue-950 border-white max-w-[400px] m-auto mt-[100px] p-6 rounded gap-2 flex flex-col"
       >
         <label htmlFor="">Email</label>
         <input
@@ -67,8 +67,7 @@ const Login = () => {
 
         <p className="text-center">
           Don't have an account?
-          <Link className="text-blue-500" to={"/singup"}>
-            {" "}
+          <Link className="text-blue-500" to={"/signup"}>
             Register
           </Link>
         </p>
