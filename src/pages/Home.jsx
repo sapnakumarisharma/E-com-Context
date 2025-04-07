@@ -52,7 +52,11 @@ const getData=async()=>{
               className=" flex  
               items-center flex-col p-2 main   h-[100%] hover:bg-slate-100   "
             >
-              <img src={ele.thumbnail} alt="" className='border-2 border-slate-200' />
+              <img
+                src={ele.thumbnail}
+                alt=""
+                className="border-2 border-slate-200"
+              />
 
               <div className=" w-[100%] h-[10%] p-2  mt-3 text-black  rounded-lg flex justify-between items-center">
                 <p className="text-[1.4rem]">${ele.price}</p>
@@ -77,12 +81,15 @@ const getData=async()=>{
       </div>
 
       <div className=" w-max mx-[25rem]  h-[55px] fixed bottom-6 left-0 right-0  m-auto">
-        <button onClick={()=>setcurrentPage(1)} className=" rounded-[100px]   shadow-md shadow-white  border  border-white  bg-blue-900  w-[50px] p-4 ">
+        <button
+          onClick={() => setcurrentPage(1)}
+          className=" rounded-[100px]   shadow-md shadow-white  border  border-white  bg-gradient-to-r from-cyan-500 to-blue-500  w-[50px] p-4 "
+        >
           <FaArrowLeft />
         </button>
         <button
           onClick={() => handlePrev()}
-          className={` rounded-[100px]   shadow-md shadow-white  border  border-white  bg-blue-900 mx-1 w-[50px] p-2`}
+          className={` rounded-[100px]   shadow-md shadow-white  border  border-white  bg-gradient-to-r from-cyan-500 to-blue-500 mx-1 w-[50px] p-2`}
         >
           prev
         </button>
@@ -91,23 +98,29 @@ const getData=async()=>{
           .fill("")
           .map((ele, i) => {
             return (
-             i+1>=currentPage && i+1<currentPage+5 && <button
-                onClick={() => setcurrentPage(i + 1)}
-                className={`  rounded-[100px] mt-6  shadow-md shadow-white mb-10 border  border-white  bg-blue-900 mx-1 w-[50px] p-3 ${
-                  currentPage == i + 1 ? "bg-green-400" : ""
-                } `}
-              >
-                {i + 1}
-              </button>
+              i + 1 >= currentPage &&
+              i + 1 < currentPage + 5 && (
+                <button
+                  onClick={() => setcurrentPage(i + 1)}
+                  className={`  rounded-[100px] mt-6  shadow-md shadow-white mb-10 border  border-white bg-gradient-to-r from-cyan-500 to-blue-500 mx-1 w-[50px] p-3 ${
+                    currentPage == i + 1 ? "bg-green-400" : ""
+                  } `}
+                >
+                  {i + 1}
+                </button>
+              )
             );
           })}
         <button
           onClick={() => handleNext()}
-          className=" rounded-[100px]   shadow-md shadow-white  border  border-white  bg-blue-900 mr-4 w-[50px] p-2 "
+          className=" rounded-[100px]   shadow-md shadow-white  border  border-white  bg-gradient-to-r from-cyan-500 to-blue-500 mr-4 w-[50px] p-2 "
         >
-          next 
+          next
         </button>
-        <button onClick={()=>setcurrentPage(btnNo)} className=" rounded-[100px]   shadow-md shadow-white  border  border-white  bg-blue-900  w-[50px] p-4  ">
+        <button
+          onClick={() => setcurrentPage(btnNo)}
+          className=" rounded-[100px]   shadow-md shadow-white  border  border-white bg-gradient-to-r from-cyan-500 to-blue-500 w-[50px] p-4  "
+        >
           <FaArrowRight />
         </button>
       </div>

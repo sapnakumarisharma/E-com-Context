@@ -15,10 +15,10 @@ const Navbar = (props) => {
   }
   //  const [showSidebar, setshowSidebar] = useState(false);
 let ctx = useContext(Store);
-const handleInput=(e)=>{
-let value=e.target.value;
-userStore.setsearchValue(value);
-}
+const handleInput = (e) => {
+  let value = e.target.value;
+  userStore.setsearchValue(value);
+};
   return (
     <div className="border bg-gradient-to-r from-slate-300 to-slate-500 border-white  fixed top-0 right-0 left-0 flex items-center gap-3 list-none justify-evenly text-[1.3rem] ">
       <h1 className="lg:text-[3rem] md:text-[2rem] bg-gradient-to-r from-pink-500 to-sky-700 bg-clip-text text-transparent">
@@ -32,14 +32,14 @@ userStore.setsearchValue(value);
 
         <li className="flex ">
           <Link to={"/cart"}>
-            <BsCartCheckFill size={30} color='white' />
+            <BsCartCheckFill size={30} color="white" />
           </Link>
-          <sup className='text-white'>{ctx.cartArr.length}</sup>
+          <sup className="text-white">{ctx.cartArr.length}</sup>
         </li>
       </div>
       <div className="bg-white w-max flex justify-center items-center p-1 rounded-lg">
-        <input 
-        onChange={handleInput}
+        <input
+          onChange={handleInput}
           type="search"
           className="w-[100px]  border-none outline-none text-black  p-1"
         />
@@ -62,9 +62,14 @@ userStore.setsearchValue(value);
           <RiMenuUnfold4Fill size={40} />
         </button>
 
-        <button onClick={handlelogout} className="bg-green-400 text-white p-2 rounded-lg">
-          LogOut
-        </button>
+        { login === true &&
+          <button
+            onClick={handlelogout}
+            className="bg-green-400 text-white p-2 rounded-lg"
+          >
+            LogOut
+          </button>
+        }
       </div>
     </div>
   );
