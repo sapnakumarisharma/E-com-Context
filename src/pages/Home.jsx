@@ -17,6 +17,11 @@ const getData=async()=>{
    console.log(data.products);
    setgetproduct(data.products);
 }
+// let filterArr = getproduct.filter(
+//   (ele) =>
+//     ele.title.toLowerCase().includes(props.searchValue?.toLowerCase() || "") ||
+//     ele.category.toLowerCase().includes(props.searchValue?.toLowerCase() || "")
+// );
  const [currentPage, setcurrentPage] = useState(1);
  const itemPrrPage=8;
  const lastIndex=itemPrrPage*currentPage;
